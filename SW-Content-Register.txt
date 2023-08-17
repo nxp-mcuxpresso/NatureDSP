@@ -1,0 +1,36 @@
+NXP Software Content Register
+
+Release:          NatureDSP
+  September 2023
+Release Location: https://github.com/nxp-mcuxpresso/NatureDSP
+Outgoing License: LA_OPT_NXP_Software_License v49 September 2023 - Additional Distribution License granted, license in Section 2.3 applies
+License File:     LICENSE.txt
+Format:           Precompiled libraries, header files
+Description:      NatureDSP is a a Digital Signal Processing Library for Xtensa HiFi and Fusion Audio Engines
+Origin:           NXP (Proprietary)
+                  Cadence Design Systems (Proprietary)
+
+--------------------------------
+Package:          libnaturedsp.a
+Name:             Naturedsp for FusionF1
+Version:          1.2.0
+Outgoing License: LA_OPT_NXP_Software_License v49 September 2023 - Additional Distribution License granted, license in Section 2.3 applies
+License File:     LICENSE.txt
+Format:           precompiled library, header files
+Description:      Digital Signal Processing for Xtensa FusionF1 Audio Engines
+Location:         ./naturedsp/fusionf1
+Origin:           NXP (Proprietary)
+                  Cadence Design Systems (Proprietary)
+
+--------------------------------
+Package:          libnaturedsp.a
+Name:             Naturedsp for HiFi4
+Version:          4.1.0
+Outgoing License: LA_OPT_NXP_Software_License v49 September 2023 - Additional Distribution License granted, license in Section 2.3 applies
+License File:     LICENSE.txt
+Format:           precompiled library, header files
+Description:      Digital Signal Processing for Xtensa HiFi4 Audio Engines
+Location:         ./naturedsp/hifi4
+Origin:           NXP (Proprietary)
+                  Cadence Design Systems (Proprietary)
+
