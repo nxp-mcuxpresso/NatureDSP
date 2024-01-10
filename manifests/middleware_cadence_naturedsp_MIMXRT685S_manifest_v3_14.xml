@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ksdk:manifest xmlns:ksdk="http://nxp.com/ksdk/2.0/ksdk_manifest_v3.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SDK_2.x_middleware_cadence_naturedsp_MIMXRT685S_manifest_v3_14" name="NatureDSP for Hifi4" brief="Digital Signal Processing for Xtensa Hifi4 DSP Audio Engines." format_version="3.14" api_version="2.0.0" xsi:schemaLocation="http://nxp.com/ksdk/2.0/ksdk_manifest_v3.0.xsd http://nxp.com/mcuxpresso/sdk/sdk_manifest_v3.14.xsd">
+
+  <externalDefinitions>
+    <definition extID="evkmimxrt685"/>
+    <definition extID="mimxrt685audevk"/>
+    <definition extID="MIMXRT685S"/>
+    <definition extID="armgcc"/>
+  </externalDefinitions>
+  <ksdk id="MCUXpressoSDK2150_middleware_cadence_naturedsp_MIMXRT685S_manifest_v3_14" name="MCUXpressoSDK2150_middleware_cadence_naturedsp_MIMXRT685S_manifest_v3_14" version="2.15.0" revision="2.15.0"/>
+  <components>
+    <component id="middleware.naturedsp.naturedsp_hifi4.MIMXRT685S" name="naturedsp_hifi4" brief="NatureDSP" version="4.1.1" full_name="NatureDSP HiFi4 library" category="Audio/NatureDSP" user_visible="false" type="middleware" package_base_path=".././" project_base_path="dsp">
+      <dependencies>
+        <all>
+          <any_of>
+            <board_dependency value="evkmimxrt685"/>
+            <board_dependency value="mimxrt685audevk"/>
+          </any_of>
+          <device_dependency value="MIMXRT685S"/>
+        </all>
+      </dependencies>
+      <source relative_path="./naturedsp/hifi4/include" project_relative_path="naturedsp/hifi4/include" type="c_include">
+        <files mask="NatureDSP_Signal.h"/>
+        <files mask="NatureDSP_Signal_audio.h"/>
+        <files mask="NatureDSP_Signal_complex.h"/>
+        <files mask="NatureDSP_Signal_diag.h"/>
+        <files mask="NatureDSP_Signal_fft.h"/>
+        <files mask="NatureDSP_Signal_fir.h"/>
+        <files mask="NatureDSP_Signal_fit.h"/>
+        <files mask="NatureDSP_Signal_id.h"/>
+        <files mask="NatureDSP_Signal_iir.h"/>
+        <files mask="NatureDSP_Signal_img.h"/>
+        <files mask="NatureDSP_Signal_math.h"/>
+        <files mask="NatureDSP_Signal_matinv.h"/>
+        <files mask="NatureDSP_Signal_matop.h"/>
+        <files mask="NatureDSP_Signal_vector.h"/>
+        <files mask="NatureDSP_types.h"/>
+      </source>
+      <source exclude="true" relative_path="./naturedsp/hifi4/doc" project_relative_path="naturedsp/hifi4/doc" type="doc">
+        <files mask="NatureDSP_Signal_Library_Reference_HiFi4.pdf"/>
+      </source>
+      <source relative_path="./naturedsp/hifi4/doc" project_relative_path="naturedsp/hifi4/doc" type="doc">
+        <files mask="release_notes.txt" hidden="true"/>
+      </source>
+      <source toolchain="armgcc" relative_path="./" type="workspace">
+        <files mask="middleware_naturedsp_naturedsp_hifi4.cmake" hidden="true"/>
+      </source>
+      <include_paths>
+        <include_path relative_path="./naturedsp/hifi4/include" project_relative_path="naturedsp/hifi4/include" type="c_include"/>
+      </include_paths>
+    </component>
+  </components>
+</ksdk:manifest>

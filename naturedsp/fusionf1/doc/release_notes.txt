@@ -11,57 +11,57 @@
 
 ==============================================================
 Release Notes for NatureDSP library (Fusion F1)
-version: v1.2.0  Jan-2022 
+version: v1.2.0  Jan-2022
 ==============================================================
-This release primarily contains changes to work with RI.6 xt-xcc and RI.7 xt-clang toolchain.  
-The performance document has been updated with RI.6 xt-xcc mips numbers on FS_AVS_LE5_FP_XC core. 
+This release primarily contains changes to work with RI.6 xt-xcc and RI.7 xt-clang toolchain.
+The performance document has been updated with RI.6 xt-xcc mips numbers on FS_AVS_LE5_FP_XC core.
 
 Performance:
-   - RI.7 xt-clang related optimizations 
+   - RI.7 xt-clang related optimizations
 Other:
-   - DISCARD functionality updated to work with RI.7 tool chain. 
-   - Test bench has been updated to include cmtx_inv4x4f kernel. 
-   - The latrf kernel in IIR has been optimized using intrinsics. 
+   - DISCARD functionality updated to work with RI.7 tool chain.
+   - Test bench has been updated to include cmtx_inv4x4f kernel.
+   - The latrf kernel in IIR has been optimized using intrinsics.
    - fno-unsafe-math-optimizations has been added for Floating point kernels.
-   - the xws has been updated to work with both RI.6 xt-xcc and RI.7 xt-clang compilers.  
+   - the xws has been updated to work with both RI.6 xt-xcc and RI.7 xt-clang compilers.
 
 Known Issues:
-   - Reordering issue for vec_tanf & vec_consinef kernel in RI6 xt-xcc with -O3. 
-     So optimization has been set to -O2 -Os for these kernels for xt-xcc builds.     
-All testing and functional validation have been done using 
+   - Reordering issue for vec_tanf & vec_consinef kernel in RI6 xt-xcc with -O3.
+     So optimization has been set to -O2 -Os for these kernels for xt-xcc builds.
+All testing and functional validation have been done using
   - RI.2021.7 xt-clang compiler version of the Xtensa Xplorer and tools.
   - RI.2021.6 xt-xcc compiler version of the Xtensa Xplorer and tools.
-  
+
 - The testing methodology and other configurations are same as previous release.
-- Please note, when one plans to use xt-clang compiler, the package is well tested with RI.7 tools. 
-  Some limitations in xt-clang/RI.6 are taken care of well in xt-clang/RI.7. 
+- Please note, when one plans to use xt-clang compiler, the package is well tested with RI.7 tools.
+  Some limitations in xt-clang/RI.6 are taken care of well in xt-clang/RI.7.
 
 ==============================================================
 Release Notes for NatureDSP library (Fusion F1)
-version: v1.1.0   
+version: v1.1.0
 ==============================================================
 
 Xtensa Xplorer IDE and tools version:
 All testing and performance measurements have been using RF.2017.5
   version of the Xtensa Xplorer and tools.
 
-This release contains following changes:  
+This release contains following changes:
 	- 16-bit FFT performance is improved (fft_cplx16x16, ifft_cplx16x16)
 	- fixed bug with sNaN propagation in scalar math routines
-	- improved Matlab code for IIR coefficient conversion in the API document  
-  
+	- improved Matlab code for IIR coefficient conversion in the API document
+
 NatureDSP_Signal Library Reference_Fusion_F1.doc
 	- Added section "4.3 Accuracy of Mathematical Functions"
 
 Known issues:
-Function ceil() and floor() in Fusion F1 Base configuration propagates (input) sNaN 
-to (output) sNaN. But Library testbench expects it to always return qNaN irrespective 
+Function ceil() and floor() in Fusion F1 Base configuration propagates (input) sNaN
+to (output) sNaN. But Library testbench expects it to always return qNaN irrespective
 input qNaN or sNaN. This displays testcases failure.
-	
-  
+
+
 ==============================================================
 Release Notes for NatureDSP library (Fusion F1)
-version: v1.0.0   
+version: v1.0.0
 ==============================================================
 
 This is the first release of the NatureDSP Signal Library for Fusion F1.
@@ -70,7 +70,7 @@ Xtensa Xplorer IDE and tools version:
 All testing and performance measurements have been using RF.2015.3
   version of the Xtensa Xplorer and tools.
 
-Release includes functions for following categories for 32, 24, 16 bit fixed 
+Release includes functions for following categories for 32, 24, 16 bit fixed
 and single precision floating point data:
   - FIR filters and related functions
   - FIR filters for decimation and interpolation
